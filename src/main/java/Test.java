@@ -1,5 +1,6 @@
 public class Test {
-    String name;
-    String result
+    public String testName;
+    public String expectedResult;
+    public int[] params;
 
 }

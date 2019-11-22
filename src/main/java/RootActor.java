@@ -19,8 +19,18 @@ public class RootActor extends AbstractActor {
         return ReceiveBuilder.create()
                 .match(TestMessage.class, testMessage -> {
                     for (Test test : testMessage.tests){
-
+                        invokeActor.tell(new TestMessage(
+                                    testMessage.packageId,
+                                    testMessage.jsScript,
+                                    testMessage.functionName,
+                                    new Test[]{test}),
+                                self()
+                        );
                     }
-                });
+                })
+                .match(Results.class, message -> {
+                    storeActor.tell(message, sender());
+                })
+                .build();
     }
 }
