@@ -1,5 +1,6 @@
 public class TestResult {
     public String packageId;
+    public boolean success;
     public String result;
     public String expected;
     public String testName;
