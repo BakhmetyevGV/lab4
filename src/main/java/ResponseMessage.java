@@ -1,2 +1,4 @@
-public class Response {
+public class ResponseMessage {
+    public String packageId;
+    public
 }

@@ -1,7 +1,7 @@
-public class Results {
+public class ResultMessage {
     public String packageId;
 
-    public Results(String packageId){
+    public ResultMessage(String packageId){
         this.packageId = packageId;
     }
 }
