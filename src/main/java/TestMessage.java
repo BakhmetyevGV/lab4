@@ -1,4 +1,6 @@
 public class TestMessage {
-    String packageId;
-    String script
+    public String packageId;
+    public String jsScript;
+    public String functionName;
+    public Test[] tests;
 }
