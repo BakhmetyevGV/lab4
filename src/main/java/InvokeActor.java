@@ -1,4 +1,9 @@
-package PACKAGE_NAME;
+import akka.actor.AbstractActor;
 
-public class InvokeActor {
+public class InvokeActor extends AbstractActor {
+
+    @Override
+    public Receive createReceive() {
+        return null;
+    }
 }
