@@ -34,9 +34,9 @@ public class InvokeActor extends AbstractActor {
                                     test.testName,
                                     result.equals(test.expectedResult),
                                     result,
-                                    
-
-                            ));
+                                    test.expectedResult,
+                                    test.params
+                            ), sender());
 
                 })
                 .build();
