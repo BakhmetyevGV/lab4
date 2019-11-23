@@ -24,10 +24,6 @@ public class StoreActor extends AbstractActor {
                 .match(ResultMessage.class, msg ->{
                     ArrayList<TestResult> results = storage.get(msg.packageId);
 
-
-
-
-
                     if(results != null){
                         results.sort(Comparator.comparing(TestResult::getTestName));
                     }
