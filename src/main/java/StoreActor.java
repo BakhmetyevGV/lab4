@@ -18,10 +18,10 @@ public class StoreActor extends AbstractActor {
                 .match(TestResult.class, msg ->{
                     if(storage.get(msg.packageId) == null){
                         storage.put(msg.packageId, new ArrayList<>());
-                    }
-                    storage.get(msg.packageId).add(msg);
 
-                })
+                        storage.get(msg.packageId).add(msg);
+                        
+
                 .match(ResultMessage.class, msg ->{
                     ArrayList<TestResult> results = storage.get(msg.packageId);
 
