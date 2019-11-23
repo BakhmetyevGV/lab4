@@ -29,7 +29,10 @@ public class StoreActor extends AbstractActor {
                         results.sort(Comparator.comparing(TestResult::getTestName));
                     }
 
-                    ResponseMessage responseMessage = new ResponseMessage(msg.packageId, results.toArray())
+                    ResponseMessage responseMessage = new ResponseMessage(
+                            msg.packageId,
+                            results.toArray(new TestResult[0])
+                    );
                 });
     }
 }
