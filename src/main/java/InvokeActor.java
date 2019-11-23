@@ -31,7 +31,8 @@ public class InvokeActor extends AbstractActor {
                     getContext().actorSelection(STORE_ACTOR_PATH)
                             .tell(new TestResult(
                                     msg.packageId,
-                                    result,
+                                    test.testName,
+                                    test
 
                             ));
 
