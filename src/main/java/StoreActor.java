@@ -34,11 +34,7 @@ public class StoreActor extends AbstractActor {
                     } else{
                         sender().tell("no data", self());
                     }
-
-
-
-
-
-                });
+                })
+                .build();
     }
 }
