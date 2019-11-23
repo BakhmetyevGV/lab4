@@ -22,7 +22,7 @@ public class StoreActor extends AbstractActor {
 
                 })
                 .match(ResultMessage.class, msg ->{
-                    ArrayList<TestResult>
+                    ArrayList<TestResult> resultsList = new Ar
                 });
     }
 }
