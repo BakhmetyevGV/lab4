@@ -5,7 +5,7 @@ import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
-public class InvokeActor extends AbstractActor {
+public class ScriptRunnerActor extends AbstractActor {
     private String STORE_ACTOR_PATH = "/user/rootActor/storeActor";
 
 

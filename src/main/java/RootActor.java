@@ -11,7 +11,7 @@ public class RootActor extends AbstractActor {
 
     public ActorRef invokeActor = getContext().actorOf(
             new RoundRobinPool(5)
-                    .props(Props.create(InvokeActor.class))
+                    .props(Props.create(ScriptRunnerActor.class))
     );
 
     @Override
