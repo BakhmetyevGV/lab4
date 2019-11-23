@@ -6,10 +6,6 @@ import akka.pattern.Patterns;
 import scala.concurrent.Future;
 
 class HttpRouter extends AllDirectives {
-
-    private static final String TEST_STARTED_MESSAGE = "Test started!";
-    private static final String TEST_PATH = "test";
-    private static final String RESULT_PATH = "result";
     private static final String PARAMETER_PACKAGE_ID = "packageId";
     private static final int TIMEOUT = 5000;
 
@@ -18,7 +14,7 @@ class HttpRouter extends AllDirectives {
 
     Route createRoute(ActorRef rootActor) {
         return route(
-                path(TEST_PATH, () ->
+                path("test", () ->
                         post(() ->
                                 entity(Jackson.unmarshaller(TestMessage.class), msg -> {
                                     rootActor.tell(msg, ActorRef.noSender());
@@ -26,7 +22,7 @@ class HttpRouter extends AllDirectives {
                                 })
                         )
                 ),
-                path(RESULT_PATH, () ->
+                path("result", () ->
                         get(() ->
                                 parameter(PARAMETER_PACKAGE_ID, packageId -> {
                                     Future<Object> result = Patterns.ask(rootActor,
