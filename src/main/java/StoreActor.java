@@ -18,7 +18,7 @@ public class StoreActor extends AbstractActor {
                     if(storage.get(msg.packageId) == null){
                         storage.put(msg.packageId, new ArrayList<>());
                     }
-                    storage.get
+                    storage.get(msg.packageId).add(msg.)
 
                 });
     }
