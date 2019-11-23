@@ -16,8 +16,10 @@ public class StoreActor extends AbstractActor {
         return ReceiveBuilder.create()
                 .match(TestResult.class, msg ->{
                     if(storage.get(msg.packageId) == null){
-                        
+                        storage.put(msg.packageId, new ArrayList<>());
                     }
+
+                    
                 });
     }
 }
