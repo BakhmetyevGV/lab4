@@ -18,4 +18,8 @@ public class TestResult {
         this.expected = expected;
         this.params = params;
     }
+
+    public  String getTestName(){
+        return testName;
+    }
 }
