@@ -1,7 +1,6 @@
 import akka.actor.AbstractActor;
 import akka.japi.pf.ReceiveBuilder;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -21,7 +20,7 @@ public class StoreActor extends AbstractActor {
                     }
                     storage.get(msg.packageId).add(msg);
                 })
-                .match(ResultMessage.class, msg ->{
+                .match(GetResultMessage.class, msg ->{
                     ArrayList<TestResult> results = storage.get(msg.packageId);
 
                     if(results != null){

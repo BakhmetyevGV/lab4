@@ -28,7 +28,7 @@ public class RootActor extends AbstractActor {
                         );
                     }
                 })
-                .match(ResultMessage.class, message -> {
+                .match(GetResultMessage.class, message -> {
                     storeActor.tell(message, sender());
                 })
                 .build();
