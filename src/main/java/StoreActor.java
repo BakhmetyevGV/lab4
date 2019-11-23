@@ -3,6 +3,7 @@ import akka.japi.pf.ReceiveBuilder;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,7 +26,7 @@ public class StoreActor extends AbstractActor {
                     ArrayList<TestResult> results = storage.get(msg.packageId);
 
                     if(results != null){
-                        
+                        results.sort(Comparator.comparing());
                     }
                 });
     }
