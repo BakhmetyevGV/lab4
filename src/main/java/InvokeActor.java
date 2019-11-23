@@ -36,10 +36,11 @@ public class InvokeActor extends AbstractActor {
                                     result,
                                     test.expectedResult,
                                     test.params
-                            ), self());
+                            )
+                                    , self()
+                            );
 
                 })
                 .build();
     }
 }
-    
