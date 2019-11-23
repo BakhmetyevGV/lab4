@@ -33,7 +33,8 @@ public class InvokeActor extends AbstractActor {
                                     msg.packageId,
                                     test.testName,
                                     result.equals(test.expectedResult),
-
+                                    result,
+                                    
 
                             ));
 
