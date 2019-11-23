@@ -36,7 +36,7 @@ public class InvokeActor extends AbstractActor {
                                     result,
                                     test.expectedResult,
                                     test.params
-                            ), sender());
+                            ), self());
 
                 })
                 .build();
