@@ -18,7 +18,7 @@ class HttpRouter extends AllDirectives {
                         post(() ->
                                 entity(Jackson.unmarshaller(TestMessage.class), msg -> {
                                     rootActor.tell(msg, ActorRef.noSender());
-                                    return complete(TEST_STARTED_MESSAGE);
+                                    return complete("listening to localhost:8080");
                                 })
                         )
                 ),
