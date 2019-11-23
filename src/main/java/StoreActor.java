@@ -16,11 +16,9 @@ public class StoreActor extends AbstractActor {
     public Receive createReceive() {
         return ReceiveBuilder.create()
                 .match(TestResult.class, msg ->{
-                    if(storage.get(msg.packageId) == null){
                         storage.put(msg.packageId, new ArrayList<>());
-
                         storage.get(msg.packageId).add(msg);
-                        
+
 
                 .match(ResultMessage.class, msg ->{
                     ArrayList<TestResult> results = storage.get(msg.packageId);
