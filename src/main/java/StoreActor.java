@@ -29,12 +29,16 @@ public class StoreActor extends AbstractActor {
                         ResponseMessage responseMessage = new ResponseMessage(
                                 msg.packageId,
                                 results.toArray(new TestResult[0]));
+
+                        sender().tell(responseMessage, self());
+                    } else{
+                        sender().tell("no data", self());
                     }
 
 
 
 
-                    sender().tell(responseMessage, self());
+
                 });
     }
 }
