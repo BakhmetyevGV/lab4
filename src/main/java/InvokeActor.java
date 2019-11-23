@@ -2,6 +2,7 @@ import akka.actor.AbstractActor;
 import akka.japi.pf.ReceiveBuilder;
 
 import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
 
 public class InvokeActor extends AbstractActor {
 
@@ -10,7 +11,7 @@ public class InvokeActor extends AbstractActor {
         return ReceiveBuilder
                 .create()
                 .match(TestMessage.class, msg ->{
-                    ScriptEngine scriptEngine = new ScriptEngine.getEngineByName
+                    ScriptEngine scriptEngine = new ScriptEngineManager().getEngineByName("")
                 })
                 .build();
     }
