@@ -18,6 +18,7 @@ public class InvokeActor extends AbstractActor {
                     try{
 
                     } catch (Exception e){
+                        engine.eval(msg.jsScript);
                         
                     }
                 })
