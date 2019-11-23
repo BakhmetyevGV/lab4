@@ -26,13 +26,13 @@ public class StoreActor extends AbstractActor {
 
                     if(results != null){
                         results.sort(Comparator.comparing(TestResult::getTestName));
-                        
+                        ResponseMessage responseMessage = new ResponseMessage(
+                                msg.packageId,
+                                results.toArray(new TestResult[0]));
                     }
 
-                    ResponseMessage responseMessage = new ResponseMessage(
-                            msg.packageId,
-                            results.toArray(new TestResult[0])
-                    );
+
+
 
                     sender().tell(responseMessage, self());
                 });
