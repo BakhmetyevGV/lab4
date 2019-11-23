@@ -29,7 +29,9 @@ public class InvokeActor extends AbstractActor {
                     }
 
                     getContext().actorSelection(STORE_ACTOR_PATH)
-                            .tell(new TestResult());
+                            .tell(new TestResult(
+                                    
+                            ));
 
                 })
                 .build();
