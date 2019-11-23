@@ -26,6 +26,7 @@ public class StoreActor extends AbstractActor {
 
                     if(results != null){
                         results.sort(Comparator.comparing(TestResult::getTestName));
+                        
                     }
 
                     ResponseMessage responseMessage = new ResponseMessage(
