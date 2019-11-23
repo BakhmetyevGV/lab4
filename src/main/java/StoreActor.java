@@ -3,10 +3,11 @@ import akka.japi.pf.ReceiveBuilder;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Map;
 
 public class StoreActor extends AbstractActor {
 
-    public Map<String, ArrayList<>>
+    public Map<String, ArrayList<TestResult>> 
 
 
     @Override
