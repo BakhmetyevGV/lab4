@@ -7,6 +7,7 @@ public class InvokeActor extends AbstractActor {
     public Receive createReceive() {
         return ReceiveBuilder
                 .create()
+                .match()
                 .build();
     }
 }
