@@ -33,6 +33,8 @@ public class StoreActor extends AbstractActor {
                             msg.packageId,
                             results.toArray(new TestResult[0])
                     );
+
+                    sender()
                 });
     }
 }
