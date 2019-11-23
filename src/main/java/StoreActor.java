@@ -20,6 +20,7 @@ public class StoreActor extends AbstractActor {
                     }
                     storage.get(msg.packageId).add(msg);
 
-                });
+                })
+                .match();
     }
 }
