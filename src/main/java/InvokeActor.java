@@ -1,6 +1,7 @@
 import akka.actor.AbstractActor;
 import akka.japi.pf.ReceiveBuilder;
 
+import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
@@ -19,7 +20,7 @@ public class InvokeActor extends AbstractActor {
 
                     } catch (Exception e){
                         engine.eval(msg.jsScript);
-                        
+                        Invocable invocable = (Invocable) engine;
                     }
                 })
                 .build();
