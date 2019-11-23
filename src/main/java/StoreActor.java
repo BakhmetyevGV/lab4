@@ -6,7 +6,7 @@ public class StoreActor extends AbstractActor {
     @Override
     public Receive createReceive() {
         return ReceiveBuilder.create()
-                .match(TestMessage.class, msg ->{
+                .match(TestResult.class, msg ->{
                     
                 });
     }
