@@ -34,7 +34,7 @@ public class StoreActor extends AbstractActor {
                             results.toArray(new TestResult[0])
                     );
 
-                    sender()
+                    sender().tell(responseMessage, self());
                 });
     }
 }
