@@ -13,7 +13,13 @@ public class InvokeActor extends AbstractActor {
                 .match(TestMessage.class, msg ->{
                     ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
                     Test test = msg.tests[0];
-                    String name;
+                    String result;
+
+                    try{
+
+                    } catch (Exception e){
+                        
+                    }
                 })
                 .build();
     }
