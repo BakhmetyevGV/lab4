@@ -22,8 +22,11 @@ public class StoreActor extends AbstractActor {
 
                 })
                 .match(ResultMessage.class, msg ->{
-                    ArrayList<TestResult> resultsList = storage.get(msg.packageId);
-                    
+                    ArrayList<TestResult> results = storage.get(msg.packageId);
+
+                    if(results != null){
+                        
+                    }
                 });
     }
 }
