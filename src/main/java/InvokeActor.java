@@ -6,7 +6,7 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
 public class InvokeActor extends AbstractActor {
-    private String ROOT_PATH
+    private String STORE_ACTOR_PATH = "/user/rootActor/storeActor";
 
 
     @Override
@@ -28,7 +28,8 @@ public class InvokeActor extends AbstractActor {
                         result = e.getMessage();
                     }
 
-                    getContext().actorSelection()
+                    getContext().actorSelection(STORE_ACTOR_PATH)
+                            .tell(new ResultMessage());
 
                 })
                 .build();
