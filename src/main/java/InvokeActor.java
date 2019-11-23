@@ -10,7 +10,7 @@ public class InvokeActor extends AbstractActor {
         return ReceiveBuilder
                 .create()
                 .match(TestMessage.class, msg ->{
-                    ScriptEngine scriptEngine = new 
+                    ScriptEngine scriptEngine = new ScriptEngine.getEngineByName
                 })
                 .build();
     }
