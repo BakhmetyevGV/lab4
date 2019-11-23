@@ -32,7 +32,7 @@ public class InvokeActor extends AbstractActor {
                             .tell(new TestResult(
                                     msg.packageId,
                                     result,
-                                    
+
                             ));
 
                 })

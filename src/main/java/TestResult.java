@@ -1,9 +1,10 @@
 public class TestResult {
     public String packageId;
+    public String testName;
     public boolean success;
     public String result;
     public String expected;
-    public String testName;
+
     public Object[] params;
 
     public TestResult() {
