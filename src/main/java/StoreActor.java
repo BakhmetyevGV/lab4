@@ -26,7 +26,7 @@ public class StoreActor extends AbstractActor {
                     ArrayList<TestResult> results = storage.get(msg.packageId);
 
                     if(results != null){
-                        results.sort(Comparator.comparing());
+                        results.sort(Comparator.comparing(TestResult.testName));
                     }
                 });
     }
