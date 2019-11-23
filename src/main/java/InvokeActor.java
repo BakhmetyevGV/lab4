@@ -19,11 +19,11 @@ public class InvokeActor extends AbstractActor {
                     try{
                         engine.eval(msg.jsScript);
                         Invocable invocable = (Invocable) engine;
-                        Object[] params = msg.
+                        Object[] params = test.params;
                         result = invocable.invokeFunction(msg.functionName, params).toString();
 
                     } catch (Exception e){
-
+                        result = e.getMessage();
                     }
                 })
                 .build();
