@@ -6,6 +6,8 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
 public class InvokeActor extends AbstractActor {
+    private String ROOT_PATH
+
 
     @Override
     public Receive createReceive() {
@@ -25,6 +27,9 @@ public class InvokeActor extends AbstractActor {
                     } catch (Exception e){
                         result = e.getMessage();
                     }
+
+                    getContext().actorSelection()
+
                 })
                 .build();
     }
