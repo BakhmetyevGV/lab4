@@ -25,7 +25,8 @@ public class ScriptRunnerActor extends AbstractActor {
                         result = invocable.invokeFunction(msg.functionName, params).toString();
 
                     } catch (Exception e){
-                        result = e.getMessage();
+                        System.out.println(e.getMessage());
+                        result = "RUNTIME EXCEPTION";
                     }
 
                     getContext().actorSelection(STORE_ACTOR_PATH)

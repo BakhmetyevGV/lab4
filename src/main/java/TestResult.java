@@ -1,4 +1,10 @@
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonAutoDetect
+@JsonPropertyOrder({"testName", "success", "result", "expected", "params"})
 public class TestResult {
+
     public String packageId;
     public String testName;
     public boolean success;
